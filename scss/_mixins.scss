@@ -13,16 +13,52 @@
 	}
 }
 
-@mixin btn {
-	padding: 22px 30px;	
-	border-radius: 28px;
-	border: 2px solid #ffffff;
-	font-size: 1.3em;
-	font-weight: 700;
-	text-transform: uppercase;
-	background-color: transparent;
-	outline: none;
+@mixin h2 {
+    font-family: $font-second;
+    font-size: 3.6rem;
+    font-weight: 400;
 }
+
+@mixin p {
+    font-size: 1.6rem;
+	font-weight: 400;
+	letter-spacing: 1.6px;
+	color: $text-grey;
+}
+
+@mixin btn {
+    max-width: 225px;
+    max-height: 60px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: $font-second;
+    letter-spacing: 1.2px;
+    text-transform: uppercase; 
+    padding: 24px;
+    border: none;
+    outline: none;
+    // background-color: #496bfe;
+    background-image: linear-gradient(45deg,#496bfe 35%, #5474fd 0);
+    color: #fff;
+    
+} 
+
+@mixin bg-cover {
+	background-position: center;
+	background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+@mixin transit($what: all, $when: 0.25s, $how: ease) {
+  transition: $what $when $how;
+}
+
 
 
 input[type="checkbox"]:checked, 

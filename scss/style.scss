@@ -1,10 +1,18 @@
+@import 'fonts';
 @import 'normalize';
 @import 'vars';
-@import 'fonts';
 @import 'mixins';
 
 * {
 	box-sizing: border-box;
+}
+
+h1,h2,h3,h4,p {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
 }
 
 html {
@@ -13,14 +21,239 @@ html {
 }
 
 body {
-	// color: $text-color;
-	// font-family: $text-font;
+	color: $text-grey;
+	font-family: $font-main;
 	font-size: 1.4rem;
 	line-height: 1.6;
 }
 
+
 .container {
-	width: 1200px;
-	max-width: 80%;
+	width: 1110px;
+	max-width: 95%;
 	margin: 0 auto;
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header {
+	padding: 265px 0 0;
+	background-color: darken(blue, 30%);
+	background-attachment: fixed;
+	@include bg-cover;
+	color: $text-light;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100vh;
+	perspective: 1px;
+	transform-style: preserve-3d;
+	overflow-y: auto;
+	overflow-x: hidden;
+	&:before {
+		
+		
+		
+	}
+		&__title {
+		font-size: 4.8rem;
+		font-weight: 700;
+		letter-spacing: 5px;
+		text-transform: uppercase;
+	}
+	&__subtitle {
+		font-size: 2.2rem;
+		font-weight: 400;
+		letter-spacing: 6.82px;	
+	}
+	&__search {
+		width: 40%;	
+		display: flex;
+		margin: 50px 0 120px;
+	}
+	&__input {
+		flex-grow: 7;
+		padding: 20px;
+		border: 2px solid #fff;
+		text-overflow: ellipsis;
+		outline: none;
+		&::placeholder {
+			font-size: 1.4rem;
+			font-weight: 400;
+			letter-spacing: 3px;
+			text-align: center;	
+			transition: all .3s;
+		}
+		&:focus::placeholder {
+			opacity: 0;
+		}
+	}
+	&__btn {
+		flex-grow: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 18px;
+		border: 2px solid #fff;
+		font-size: 1.4rem;
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: 1.5px;
+		font-family: $font-second;
+		color: #fff;
+		background-color: $blue;
+		outline: none;
+		@include transit;
+		&:hover,
+		&:focus {
+		background-color: darken($blue,5%);
+		}
+		&:active {
+			background-color: lighten($blue,5%);
+		}
+	}
+	&__btn-icon {
+		margin-left: 15px;
+	}
+	&__scroll {
+		font-size: 1.4rem;
+		font-weight: 400;
+		letter-spacing: 2.8px;
+		color: #fff;
+		@include transit;
+		&:hover,
+		&:focus,
+		&:active {
+		transform: scale(1.1);
+		}
+		&:hover .header__arrow,
+		&:focus .header__arrow,
+		&:active .header__arrow {
+		transform: translatey(400%) scale(1.4);
+		}
+	}
+	&__arrow {
+		display: block;
+		margin: 15px auto;
+		@include transit($when: 1s);
+	}
+}
+.heading {
+	padding: 25px 0;
+	width: 100%;
+	background-color: $blue;
+	margin-top: auto;
+	&__logo {
+		font-size: 2.4rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 2.4px;
+		color: #fff;
+		@include transit;
+		&:hover,
+		&:focus,
+		&:active {
+		transform: scale(1.1);
+		}
+	}
+	&__navs {
+		width: 50%;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__nav {
+		font-family: $font-second;
+		font-size: 1.4rem;
+		font-weight: 400;
+		text-transform: uppercase;
+		color: #fff;
+		border-bottom: 1px solid transparent;
+		@include transit;
+		&:hover,
+		&:focus,
+		&:active {
+		border-bottom: 1px solid #fff;
+		}
+	}
+}
+
+.choose {
+	background-attachment: fixed;
+	@include bg-cover;
+	padding: 120px 0;
+	&__flex {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__text {
+		width: calc(100% / 12 * 7);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+	&__title {
+		@include h2;
+		color: #fff;
+		padding-top: 50px;
+	}
+	&__description {
+		@include p;
+		width: 90%;
+	}
+	&__btn {
+		@include btn;
+		transition: all 1s;
+		position: relative;
+		z-index: 1;
+		&:after {
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color:#496bfe;			
+			transition: all 0.6s ease-out;
+			z-index: 2;
+			opacity: 0;
+		}
+		&:hover:after,
+		&:focus:after {
+			opacity: 1;
+		}
+		&:active:after {
+			background-color: lighten(#496bfe,10%);
+		}
+	}
+	&__span {
+		position: relative;
+  		z-index: 3;
+	}
+	&__imgs {
+		width: calc(100% / 12 * 5);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	&__img-wrp {
+		width: 76%;
+		padding-top: 48%;
+		position: relative;
+		overflow: hidden;
+		margin: 2px 0;
+		&--left {
+			align-self: flex-start;	
+			
+		}
+		&--right {
+			align-self: flex-end;
+		}
+	}
+	&__img {
+		@include pos-a;		
+	}
 }
