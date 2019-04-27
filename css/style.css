@@ -395,8 +395,8 @@ body {
 
 .header {
   padding: 265px 0 0;
+  min-height: 100vh;
   background-color: #000066;
-  background-attachment: fixed;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -410,14 +410,7 @@ body {
   flex-direction: column;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
-  min-height: 100vh;
-  -webkit-perspective: 1px;
-  perspective: 1px;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  overflow-y: auto;
-  overflow-x: hidden; }
+  align-items: center; }
   .header__title {
     font-size: 4.8rem;
     font-weight: 700;
@@ -592,7 +585,6 @@ body {
       border-bottom: 1px solid #fff; }
 
 .choose {
-  background-attachment: fixed;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
