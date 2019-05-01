@@ -27,6 +27,37 @@ body {
 	line-height: 1.6;
 }
 
+.section-btn {
+	@include btn;
+	transition: all 1s;
+	position: relative;
+	z-index: 1;
+	&:after {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color:#496bfe;			
+		transition: all 0.6s ease-out;
+		z-index: 2;
+		opacity: 0;
+	}
+	&:hover:after,
+	&:focus:after {
+		opacity: 1;
+	}
+	&:active:after {
+		background-color: lighten(#496bfe,10%);
+	}
+	&__span {
+		position: relative;
+  		z-index: 3;
+	}	
+}
+
+
 .container {
 	width: 1110px;
 	max-width: 95%;
@@ -48,7 +79,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	// justify-content: space-between;	
+	background-attachment: fixed;
 		&__title {
 		font-size: 4.8rem;
 		font-weight: 700;
@@ -189,38 +220,10 @@ body {
 		color: #fff;
 		padding-top: 50px;
 	}
-	&__description {
+	&__p {
 		@include p;
 		width: 90%;
-	}
-	&__btn {
-		@include btn;
-		transition: all 1s;
-		position: relative;
-		z-index: 1;
-		&:after {
-			position: absolute;
-			content: '';
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color:#496bfe;			
-			transition: all 0.6s ease-out;
-			z-index: 2;
-			opacity: 0;
-		}
-		&:hover:after,
-		&:focus:after {
-			opacity: 1;
-		}
-		&:active:after {
-			background-color: lighten(#496bfe,10%);
-		}
-	}
-	&__span {
-		position: relative;
-  		z-index: 3;
+		letter-spacing: 1.6px;
 	}
 	&__imgs {
 		width: calc(100% / 12 * 5);
@@ -246,3 +249,84 @@ body {
 		@include pos-a;		
 	}
 }
+
+.country {
+	padding: 230px 0 100px;
+	@include bg-cover;
+	background-attachment: fixed;
+	&__flex {
+		display: flex;
+		flex-direction: column;
+	}
+	&__content {
+		width: 50%;
+		padding: 50px 30px;
+		background-color: $footer-bg;
+		opacity: .9;
+		&--right {
+			align-self: flex-end;
+		}
+	}
+	&__suptitle {
+		font-size: 2rem;
+		letter-spacing: 1.5px;
+	}
+	&__title {
+		@include h3;
+		margin: 30px 0;
+	}
+	&__p {
+		@include p;
+		margin-bottom: 48px;
+	}
+}
+
+.feedback {
+	padding: 120px 200px;
+	@include bg-cover;
+	&__title {
+		text-align: center;
+		@include h2;
+	}
+	&__content {
+		display: flex;
+		justify-content: center;
+		margin-top: 80px;
+		align-items: stretch;
+	}
+	&__img-wrp {
+		width: calc(100% / 2 - 10%);
+		overflow: hidden;
+		background-color: $footer-bg;
+		opacity: .9;
+	}
+	&__img {
+		height: 100%;
+		width: 100%;	
+		object-fit: cover;
+		object-position: center;
+	}
+	&__text {
+		width: calc(100% / 2 + 10%);
+		padding: 40px 50px;
+		background-color: $footer-bg;
+		opacity: .9;
+	}
+	&__username {
+		@include h3;
+	}
+	&__quote {
+		margin: 40px 0 0;
+		text-indent: 40px;
+		position: relative;
+		@include p;
+	}
+	.fa-quote-left {
+		position: absolute;
+		top: -18px;
+		left: -40px;
+		color: #496bfe;
+		font-size: 2.3rem;
+	}
+}
+
