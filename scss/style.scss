@@ -542,13 +542,13 @@ body {
 	.header {
 		&__input {
 		flex-grow: 7;
-		padding: 5px;
+		padding: 20px;
 			&::placeholder {
 				line-height: 1.2;
 			}
 		}
-		&__menu {
-				top: -450%;
+		.hmbrgr__menu {
+				top: -620%;
 			}	
 	}
 	.choose {

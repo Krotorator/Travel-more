@@ -1010,7 +1010,7 @@ body {
     -webkit-box-flex: 7;
     -ms-flex-positive: 7;
     flex-grow: 7;
-    padding: 5px; }
+    padding: 20px; }
     .header__input::-webkit-input-placeholder {
       line-height: 1.2; }
     .header__input::-moz-placeholder {
@@ -1021,8 +1021,8 @@ body {
       line-height: 1.2; }
     .header__input::placeholder {
       line-height: 1.2; }
-  .header__menu {
-    top: -450%; }
+  .header .hmbrgr__menu {
+    top: -620%; }
   .choose__flex {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
