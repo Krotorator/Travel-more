@@ -998,15 +998,9 @@ body {
     max-width: 100%; } }
 
 @media (max-width: 770px) {
-  .header__title {
-    font-size: 4rem; }
-  .header__subtitle {
-    font-size: 2rem; }
-  .heading__logo, .footer__logo {
-    font-size: 2rem; }
-  .hmbrgr__nav {
-    font-size: 1rem; }
-  .hmbrgr__menu {
+  html {
+    font-size: 8px; }
+  .header__menu {
     top: -450%; }
   .choose__flex {
     -webkit-box-orient: vertical;
@@ -1029,8 +1023,6 @@ body {
   .capability {
     background-position: 50% 4vw;
     background-size: 90%; }
-    .capability__title {
-      font-size: 2.2rem; }
   .country {
     padding: 6vw 0 6vw; }
     .country__content {
@@ -1039,10 +1031,6 @@ body {
       padding: 20px 20px; }
     .country__title {
       font-size: 1.8rem; }
-  .feedback__title {
-    font-size: 2.2rem; }
-  .feedback__username {
-    font-size: 1.8rem; }
   .feedback__content {
     margin-top: 40px; }
   .feedback__img-wrp {
@@ -1052,6 +1040,8 @@ body {
     padding: 20px 20px; } }
 
 @media (max-width: 430px) {
+  html {
+    font-size: 7px; }
   .choose__text {
     width: 90%;
     margin: 0 auto; }
