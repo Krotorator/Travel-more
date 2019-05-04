@@ -605,6 +605,11 @@ body {
 	html {
 		font-size: 6px;
 	}
+	.header {
+		&__btn {
+			padding: 10px;
+		}
+	}
 	.heading {
 		padding: 10px 0;
 	}
@@ -629,8 +634,6 @@ body {
 	}
 	.section-btn {
 		width: 100%;
-		height: auto;
-		padding: 10px;
 	}
 
 }

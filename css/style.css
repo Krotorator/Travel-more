@@ -1059,6 +1059,8 @@ body {
 @media (max-width: 430px) {
   html {
     font-size: 6px; }
+  .header__btn {
+    padding: 10px; }
   .heading {
     padding: 10px 0; }
   .choose {
@@ -1073,6 +1075,4 @@ body {
     .feedback__content {
       width: 100%; }
   .section-btn {
-    width: 100%;
-    height: auto;
-    padding: 10px; } }
+    width: 100%; } }
