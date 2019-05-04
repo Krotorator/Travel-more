@@ -638,7 +638,8 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 120px 0; }
+  padding: 120px 0;
+  background-color: #232323; }
   .choose__flex {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -685,7 +686,8 @@ body {
     width: 76%;
     height: 48%;
     overflow: hidden;
-    margin: 2px 0; }
+    margin: 2px 0;
+    background: #403e3e; }
     .choose__img-wrp--left {
       -ms-flex-item-align: start;
       align-self: flex-start; }
@@ -729,7 +731,8 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  background-color: #232323; }
   .country__flex {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -766,7 +769,8 @@ body {
   padding: 7vw 14vw;
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-color: #232323; }
   .feedback__title {
     text-align: center;
     font-family: "Aleo", "Arial", sans-serif;
